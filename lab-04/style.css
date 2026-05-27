@@ -1,0 +1,104 @@
+:root {
+    --primary-blue: #3b82f6;
+    /* Основний блакитний */
+    --primary-dark: #1d4ed8;
+    /* Темний блакитний для акцентів */
+    --bg-color: #f4f7fb;
+    /* Світлий фон сторінки */
+    --card-bg: #ffffff;
+    /* Фон карток */
+    --text-main: #1e293b;
+    /* Основний текст */
+    --text-muted: #64748b;
+    /* Допоміжний текст */
+    --code-bg: #f8fafc;
+    /* Фон для блоків з кодом */
+    --code-border: #e2e8f0;
+    /* Рамка для коду */
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.task {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px -5px rgba(59, 130, 246, 0.08);
+    border-top: 4px solid var(--primary-blue);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px -5px rgba(59, 130, 246, 0.12);
+}
+
+.task h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.task h2::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    border-left: 4px solid #93c5fd;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    color: #334155;
+    overflow-x: auto;
+}
