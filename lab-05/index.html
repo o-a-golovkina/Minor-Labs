@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="top-panel">
+      <div>
+        <p class="small-text">Твої завдання на сьогодні</p>
+        <h1>Task Manager</h1>
+      </div>
+      <div class="user-box" id="userInfo">Завантаження...</div>
+    </header>
+
+    <main class="app-card">
+      <form class="task-form" id="taskForm">
+        <input class="task-input" id="taskInput" type="text" placeholder="Що плануєш зробити?" autocomplete="off">
+        <button class="add-btn" id="addBtn" type="submit" disabled>Додати</button>
+      </form>
+
+      <div class="search-row">
+        <input class="search-input" id="searchInput" type="text" placeholder="Знайти завдання...">
+      </div>
+
+      <div class="filters" aria-label="Фільтри завдань">
+        <button class="filter-btn active" type="button" data-filter="all">Всі</button>
+        <button class="filter-btn" type="button" data-filter="active">Активні</button>
+        <button class="filter-btn" type="button" data-filter="completed">Виконані</button>
+      </div>
+
+      <div class="status-line">
+        <span id="activeCounter">Активних завдань: 0</span>
+        <span class="loader hidden" id="loader">Оновлюю...</span>
+      </div>
+
+      <p class="error hidden" id="errorBox"></p>
+
+      <ul class="task-list" id="taskList"></ul>
+
+      <p class="empty-message hidden" id="emptyMessage">Тут поки що порожньо ✨</p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
